@@ -1,5 +1,7 @@
 /// execute_script.js
-window.addEventListener("beforeunload", function (event) {
-   event.preventDefault();
-    event.returnValue = '';
-});
+//window.addEventListener("load", function {
+   if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+      event.preventDefault();
+      event.returnValue = '';
+   }
+//});
