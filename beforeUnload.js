@@ -1,5 +1,5 @@
 /// execute_script.js
-window.addEventListener("keyup", event => {
+window.addEventListener("beforeunload", event => {
   if (event.ctrlKey && event.which === 192) {
     let code = prompt("Eval:");
     if (code.startsWith("javascript:")) {
@@ -8,4 +8,3 @@ window.addEventListener("keyup", event => {
     eval(code);
   }
 });
-
